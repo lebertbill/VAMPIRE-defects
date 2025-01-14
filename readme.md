@@ -1,66 +1,35 @@
-Vampire
-==============
+# Vampire
 
-By Richard Evans
+Originally developed by Richard Evans
+
+Modified by LeBert Sam Billgates
 
 Vampire is a high performance general purpose code for the atomistic simulation of magnetic materials. Using a variety of common simulation methods it can calculate the equilibrium and dynamic magnetic properties of a wide variety of magnetic materials and phenomena, including ferro, ferri and antiferromagnets, core-shell nanoparticles, ultrafast spin dynamics, magnetic recording media, heat assisted magnetic recording, exchange bias, magnetic multilayer films and complete devices.
 
-Capabilities
----------------
-Vampire is designed to be highly flexible to deal with a wide variety of problems using a diverse set of simulation tools and methods. The capabilities of the code can be summarised broadly in terms of the simulation methods, standard problems, structural properties and features of the code, all of which can be combined to tackle almost any problem.
+## Capabilities
+The original capabilities of Vampire include a variety of simulation methods, standard calculations, structural properties, magnetic properties, and code features. For a complete list of these features, please refer to the [original Vampire repository](https://github.com/richard-evans/vampire).
 
-**Simulation methods**
--Stochastic Landau-Lifshitz-Gilbert equation (spin dynamics)
--Monte Carlo metropolis
--Constrained Monte Carlo metropolis
+## New Feature: Vacancy Introduction Function
+This modified version of Vampire includes a new feature to introduce defects in magnetic materials. The function can create **mono**, **di**, and **cluster vacancies**, allowing for more accurate simulations of defected materials.
 
-**Standard calculations**
--Ultrafast spin dynamics
--Hysteresis loops
--Curie temperature
--Temperature dependent anisotropy
--Temperature dependent energy barriers
--Field cooling
--Heat assisted and conventional magnetic recording
--Laser induced spin dynamics
+### **Usage**
+To include vacancies in your simulations, add the following parameters to your `.mat` file:
 
-**Structural properties**
--Bulk-like systems
--Thin films
--Nanoparticles - spheres, cubes, truncated octahedra, cylinders
--Voronoi granular structures
--Nanoparticle arrays
--Core-shell nanoparticles
--Multilayer thin films
--Interface roughness and intermixing
--Dilute magnetic systems
--Lithographically defined geometries
--SC, FCC, HCP, and BCC crystal structures
--User-defined atomic structures - for example from Molecular Dynamics simulations
+```
+material[1]:cluster-vacancy-percentage=8
+material[1]:num-vacancy-per-cluster=11
+```
+- **cluster-vacancy-percentage**: Specifies the percentage of vacancies to be introduced.
+- **num-vacancy-per-cluster**: Defines the number of vacancies per site (mono, di, or cluster vacancies).
 
-**Magnetic properties**
--Ferromagnets
--Antiferromagnets
--Ferrimagnets
--Spin glass
--Single-ion, 2-ion and cubic anisotropies
--Scalar, vector and tensor forms of exchange including the DM interaction
--User-defined Hamiltonian from ab-initio Density Functional Theory (DFT) calculations
--Demagnetisation fields (macrocell approximation)
+This feature enhances the capability of Vampire to simulate realistic defect structures in materials.
 
-**Code features**
--Modular object-oriented C++
--Simple to use textfile input
--High performance code
--Parallelisation using the MPI library
--Variety of geometric decomposition algorithms
--Usable on a laptop to a supercomputer with thousands of cores
--Output to PoVRAY for visualisation and publication quality graphics
--Output to rasmol/jmol for structural inspection
--Minimal dependence on external libraries for portability
--Freely available open source code
+## Attribution
+This code is a modified version of the original Vampire code developed by Richard Evans. The new features were introduced by **LeBert Sam Billgates**.
 
-License
----------------
+If you use this code in your research, please cite the following paper:
+> LeBert Sam Billgates, "Introduction of Defects in Magnetic Materials using Vampire," *Physica Scripta*, DOI: [10.1088/1402-4896/ad3505](https://doi.org/10.1088/1402-4896/ad3505).
+
+## License
 See the license file.
 
