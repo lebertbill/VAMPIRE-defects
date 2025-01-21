@@ -2,12 +2,11 @@
 
 Originally developed by Richard Evans
 
-Modified by LeBert Sam Billgates
 
 Vampire is a high performance general purpose code for the atomistic simulation of magnetic materials. Using a variety of common simulation methods it can calculate the equilibrium and dynamic magnetic properties of a wide variety of magnetic materials and phenomena, including ferro, ferri and antiferromagnets, core-shell nanoparticles, ultrafast spin dynamics, magnetic recording media, heat assisted magnetic recording, exchange bias, magnetic multilayer films and complete devices.
 
 ## Capabilities
-The original capabilities of Vampire include a variety of simulation methods, standard calculations, structural properties, magnetic properties, and code features. For a complete list of these features, please refer to the [original Vampire repository](https://github.com/richard-evans/vampire).
+The  capabilities of Vampire include a variety of simulation methods, standard calculations, structural properties, magnetic properties, and code features. Forked from [original Vampire repository](https://github.com/richard-evans/vampire).
 
 ## New Feature: Vacancy Introduction Function
 This modified version of Vampire includes a new feature to introduce defects in magnetic materials. The function can create **mono**, **di**, and **cluster vacancies**, allowing for more accurate simulations of defected materials.
